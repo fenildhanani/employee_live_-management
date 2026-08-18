@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: mord-spark-elms-backend
+    env: node
+    region: singapore
+    plan: free
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 5000
+      - key: MONGO_URI
+        value: mongodb+srv://fenildhanani28_db_user:CO5j606mDJIFjzXR@cluster0.o43uoep.mongodb.net/employee_leave_management?retryWrites=true&w=majority
+      - key: JWT_SECRET
+        value: super_secret_jwt_key_mord_spark_2026
+      - key: CLIENT_URL
+        value: https://mord-spark-elms.vercel.app
